@@ -5,8 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SkanerUP"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="650">
     <Grid>
-        
+        <ComboBox Name="devicesComboBox" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" Width="384"/>
+        <Button Name="buttonReload" Content="Reload" HorizontalAlignment="Left" Margin="493,25,0,0" VerticalAlignment="Top" Width="75" Click="buttonReload_Click"/>
+        <Button Name="buttonChooseFile" Content="ChooseFile" HorizontalAlignment="Left" Margin="493,49,0,0" VerticalAlignment="Top" Width="75" Click="buttonChooseFile_Click"/>
+        <Label Content="File Path" HorizontalAlignment="Left" Margin="10,356,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="textBoxFilePath" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="10,387,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="407"/>
+        <Button Name="buttonScan" Content="Scan" HorizontalAlignment="Left" Margin="493,73,0,0" VerticalAlignment="Top" Width="75" Click="buttonScan_Click"/>
+        <Slider Name="sliderBrightness" IsSnapToTickEnabled="True" HorizontalAlignment="Left" Margin="522,132,0,0" VerticalAlignment="Top" Maximum="100" Height="21" Width="100" RenderTransformOrigin="0.5,0.5" ValueChanged="Slider_ValueChanged">
+            <Slider.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-31.474"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Slider.RenderTransform>
+        </Slider>
+        <Label Content="Brightness" HorizontalAlignment="Left" Margin="500,120,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-27.108"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Name="labelBrightnessValue" Content="" HorizontalAlignment="Left" Margin="553,173,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-30.768"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Image Name="imageScanned" HorizontalAlignment="Left" Height="302" VerticalAlignment="Top" Width="209" Margin="116,49,0,0"/>
+
     </Grid>
 </Window>
